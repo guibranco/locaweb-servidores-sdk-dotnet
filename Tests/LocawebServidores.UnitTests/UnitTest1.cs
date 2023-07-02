@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace SolutionName.UnitTests
+namespace LocawebServidores.UnitTests
 {
     public class UnitTest1
     {

@@ -4,13 +4,13 @@ image: Visual Studio 2022
 configuration: Release
 
 environment:
-  SOLUTION_NAME: SolutionName
+  SOLUTION_NAME: LocawebServidores
   CODACY_PROJECT_TOKEN:
-    secure: <secure token from Codacy>
+    secure: Q1dybWPCnk8TsBUZ9kKGkQl0YgSj8+CKK+AvICQRs1+EI4PXjpivw60bCULiS3xl
   CODECLIMATE_TOKEN:
-    secure: <secure token from CodeClimate>
+    secure: nZ7wT1FXfwtQLBlMHddeLTF1AInIhcB4wgr6nBjSshzZK9ve7r3Wq1mBNh5ALag305Rs8OBglr4oDnZco8AWanL2TWPTUsg/wujKsCBZ8SY=
   SONAR_TOKEN:
-    secure: <secure token from Sonar Cloud>
+    secure: mXObJCZU9MK/3gNfZ6znCro7OMpN7YtE9R94k/7fwnkC7siE0H2SAO3mv0iuws0g
 
 dotnet_csproj:
   patch: true
