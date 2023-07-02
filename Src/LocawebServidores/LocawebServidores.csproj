@@ -15,7 +15,7 @@
     <PackageProjectUrl>https://guibranco.github.io/locaweb-servidores-sdk-dotnet</PackageProjectUrl>
     <PackageIcon>logo.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Description>{project description}</Description>
+    <Description>Locaweb Servidores API Client SDK for .NET projects</Description>
     <RepositoryType>GIT</RepositoryType>
     <RepositoryUrl>https://github.com/guibranco/locaweb-servidores-sdk-dotnet</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
