@@ -4,7 +4,6 @@ image: Visual Studio 2022
 configuration: Release
 
 environment:
-  SOLUTION_NAME: LocawebServidores
   CODACY_PROJECT_TOKEN:
     secure: Q1dybWPCnk8TsBUZ9kKGkQl0YgSj8+CKK+AvICQRs1+EI4PXjpivw60bCULiS3xl
   CODECLIMATE_TOKEN:
@@ -90,11 +89,11 @@ after_build:
 - 7z a -tzip -mx9 "%SOLUTION_NAME%.%APPVEYOR_BUILD_VERSION%.Coverage.zip" Coverage
 
 artifacts:
-- path: $(SOLUTION_NAME).%APPVEYOR_BUILD_VERSION%.nupkg
-  name: Package
-
 - path: $(SOLUTION_NAME).%APPVEYOR_BUILD_VERSION%.zip
   name: ZipFile
+
+- path: $(SOLUTION_NAME).%APPVEYOR_BUILD_VERSION%.nupkg
+  name: Package
 
 - path: $(SOLUTION_NAME).%APPVEYOR_BUILD_VERSION%.Coverage.zip
   name: Coverage
@@ -112,4 +111,4 @@ deploy:
   tag: $(appveyor_build_version)
   auth_token: $(GITHUB_TOKEN)
   force_update: true
-  artifact: ZipFile, Coverage
+  artifact: ZipFile, Package, Coverage
