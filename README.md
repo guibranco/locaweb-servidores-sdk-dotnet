@@ -36,6 +36,8 @@ Locaweb Servidores API Client SDK for .NET projects
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=guibranco_locaweb-servidores-sdk-dotnet&metric=bugs)](https://sonarcloud.io/dashboard?id=guibranco_locaweb-servidores-sdk-dotnet)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=guibranco_locaweb-servidores-sdk-dotnet&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=guibranco_locaweb-servidores-sdk-dotnet)
 
+[![DeepSource](https://app.deepsource.com/gh/guibranco/GuiStracini.Mandae.svg/?label=active+issues&show_trend=true&token=IeLgGedanFVCj0wxFnPqF3V4)](https://app.deepsource.com/gh/guibranco/GuiStracini.Mandae/?ref=repository-badge)
+
 ---
 
 ## Installation
