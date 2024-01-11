@@ -40,7 +40,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [guibranco/locaweb-servidores-sdk-dotnet](https://github.com/guibranco/locaweb-servidores-sdk-dotnet)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|12<br/>Tools used|12/14/23 <br/>Report generated|
+|12<br/>Tools used|01/11/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -133,7 +133,7 @@ Full tech stack [here](/techstack.md)
   <br>
   <sub><a href="http://xunit.github.io/">xUnit</a></sub>
   <br>
-  <sub>v2.6.3</sub>
+  <sub>v2.6.5</sub>
 </td>
 
 </tr>
@@ -159,7 +159,7 @@ Full tech stack [here](/techstack.md)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[xunit.runner.visualstudio](https://www.nuget.org/xunit.runner.visualstudio)|v2.5.5|12/11/23|dependabot[bot] |Other|N/A|
+|[xunit.runner.visualstudio](https://www.nuget.org/xunit.runner.visualstudio)|v2.5.6|01/08/24|dependabot[bot] |Other|N/A|
 
 <br/>
 <div align='center'>
