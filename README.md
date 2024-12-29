@@ -61,7 +61,7 @@ Download the latest zip file from the [Release](https://github.com/guibranco/loc
 
 ## Features
 
-Implements all features of Project name API available at [Project name](https://project.name.com/)
+Implements all features of Project name API available at [API de Servidores](https://developer.locaweb.com.br/documentacoes/apiservidores/)
 
 -  Feature #1
 -  Feature #2
