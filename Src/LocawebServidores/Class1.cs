@@ -4,9 +4,9 @@ namespace LocawebServidores
 {
     public class Class1
     {
-        public void Main(string[] args)
+        public async Task MainAsync(string[] args)
         {
-            Console.WriteLine(string.Join(" ", args));
+            await Console.Out.WriteLineAsync(string.Join(" ", args));
         }
     }
 }
