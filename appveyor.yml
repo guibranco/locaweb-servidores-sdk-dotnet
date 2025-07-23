@@ -6,8 +6,6 @@ configuration: Release
 environment:
   CODACY_PROJECT_TOKEN:
     secure: Q1dybWPCnk8TsBUZ9kKGkQl0YgSj8+CKK+AvICQRs1+EI4PXjpivw60bCULiS3xl
-  CODECLIMATE_TOKEN:
-    secure: nZ7wT1FXfwtQLBlMHddeLTF1AInIhcB4wgr6nBjSshzZK9ve7r3Wq1mBNh5ALag305Rs8OBglr4oDnZco8AWanL2TWPTUsg/wujKsCBZ8SY=
 
 dotnet_csproj:
   patch: true
@@ -33,7 +31,6 @@ before_build:
 - cmd: choco install opencover.portable
 - cmd: choco install codecov
 - cmd: curl -L https://github.com/codacy/codacy-coverage-reporter/releases/latest/download/codacy-coverage-reporter-assembly.jar > ./codacy-test-reporter.jar
-- cmd: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-windows-amd64 > codeclimate-test-reporter.exe
 - cmd: dotnet tool install --global dotnet-sonarscanner
 
 build:
@@ -51,7 +48,6 @@ build_script:
 - ps: if(-Not $env:APPVEYOR_PULL_REQUEST_NUMBER) { $Params += "/d:sonar.branch.name=`"$env:APPVEYOR_REPO_BRANCH`"" }
 - ps: if($env:APPVEYOR_PULL_REQUEST_NUMBER) { $Params += "/d:sonar.pullrequest.key=$env:APPVEYOR_PULL_REQUEST_NUMBER", "/d:sonar.pullrequest.branch=`"$env:APPVEYOR_REPO_BRANCH`"" }
 - ps: Start-process "dotnet" "sonarscanner begin $($Params -join ' ')"
-- codeclimate-test-reporter before-build
 - dotnet build %SOLUTION_NAME%.sln
 - ps: $TEST_PROJECTS = (Get-ChildItem -Path .\Tests\**\ -Recurse -Include *.csproj).Fullname
 - ps: |
@@ -60,8 +56,6 @@ build_script:
         dotnet test $testProject /p:CollectCoverage=true "/p:CoverletOutputFormat=\`"cobertura,opencover,lcov\`""
     }
 - if %LOCAL_PR% EQU 1 codecov -f "Tests\%SOLUTION_NAME%.UnitTests\coverage.opencover.xml"
-- if %LOCAL_PR% EQU 1 codeclimate-test-reporter format-coverage -t lcov -o "Tests\%SOLUTION_NAME%.UnitTests\code-climate.json" "Tests\%SOLUTION_NAME%.UnitTests\coverage.info"
-- if %LOCAL_PR% EQU 1 codeclimate-test-reporter upload-coverage -i "Tests\%SOLUTION_NAME%.UnitTests\code-climate.json" -r %CODECLIMATE_TOKEN%
 - if %LOCAL_PR% EQU 1 java -jar ./codacy-test-reporter.jar report -l CSharp -t %CODACY_PROJECT_TOKEN% -r "Tests\%SOLUTION_NAME%.UnitTests\coverage.opencover.xml"
 - if %LOCAL_PR% EQU 1 dotnet sonarscanner end /d:sonar.token="%SONAR_TOKEN%"
 
