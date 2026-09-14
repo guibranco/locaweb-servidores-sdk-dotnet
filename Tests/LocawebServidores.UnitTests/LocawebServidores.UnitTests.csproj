@@ -2,6 +2,9 @@
   <PropertyGroup>
     <ProjectGuid>2F57B9CD-5505-4456-B9FE-F91DCB4476D6</ProjectGuid>
     <TargetFramework>net7.0</TargetFramework>
+    <RollForward>Major</RollForward>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
   <ItemGroup>
